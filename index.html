@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EmprendeMás — Tu tienda online</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner contenedor">
+      <h1>🛍️ Emprendenet</h1>
+      <p class="header-tagline">La plataforma para pequeños y medianos emprendedores</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner contenedor">
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#estadisticas">Estadísticas</a></li>
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#juego">Juego</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="btn-nav" onclick="mostrarBienvenida()">Ingresar</button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- INICIO / HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h2 id="mensaje">Bienvenido a Emprendenet</h2>
+        <p>Vende más, llega más lejos. La plataforma pensada para emprendedores.</p>
+        <div class="hero-btns contenedor">
+          <button class="btn-primario" onclick="actualizarMensaje()">✨ Actualizar mensaje</button>
+          <button class="btn-secundario" onclick="confirmarAccion()">📦 Ver mi tienda</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section id="estadisticas" class="seccion-info">
+      <h2 class="seccion-titulo">Panel de control</h2>
+      <div class="dashboard">
+        <div class="card stat-card">
+          <div class="stat-icon">📦</div>
+          <h3>Total Productos</h3>
+          <p class="stat-numero">1,248</p>
+          <p class="stat-detalle">+12% este mes</p>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-icon">👥</div>
+          <h3>Usuarios Activos</h3>
+          <p class="stat-numero">3,572</p>
+          <p class="stat-detalle">+8% esta semana</p>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-icon">💰</div>
+          <h3>Ventas del Mes</h3>
+          <p class="stat-numero">$24,890</p>
+          <p class="stat-detalle">Meta: $30,000</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="seccion-productos">
+      <h2 class="seccion-titulo">Productos destacados</h2>
+      <div class="contenedor productos-flex">
+
+        <div class="card producto-card">
+          <div class="producto-img">🍵</div>
+          <h3>Bebidas tradicionales premium</h3>
+          <p>Mezcla exclusiva de hierbas orgánicas cosechadas a mano en los Andes ecuatorianos.</p>
+          <span class="precio">$12.50</span>
+          <button class="btn-primario btn-small" onclick="agregarCarrito('Bebida Tradicional')">Agregar al carrito</button>
+        </div>
+
+        <div class="card producto-card">
+          <div class="producto-img">🧴</div>
+          <h3>Cacao Vivo</h3>
+          <p>Cosméticos y productos con manteca de cacao y aceite de aguacate, 100% natural.</p>
+          <span class="precio">$18.00</span>
+          <button class="btn-primario btn-small" onclick="agregarCarrito('Crema de Cacao')">Agregar al carrito</button>
+        </div>
+
+        <div class="card producto-card">
+          <div class="producto-img">🪡</div>
+          <h3>Shagras Traditional</h3>
+          <p>Artesanía otavaleña con diseños ancestrales, tejido en lana de oveja 100% natural.</p>
+          <span class="precio">$35.00</span>
+          <button class="btn-primario btn-small" onclick="agregarCarrito('Bolso Tejido')">Agregar al carrito</button>
+        </div>
+
+        <div class="card producto-card">
+          <div class="producto-img">🍬</div>
+          <h3>SWEET DIET</h3>
+          <p>Dulces y postres naturales, con bajo contenido de azúcar, 100% natural.</p>
+          <span class="precio">$8.00</span>
+          <button class="btn-primario btn-small" onclick="agregarCarrito('Sweet Diet')">Agregar al carrito</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section id="funcionalidades" class="seccion-funciones">
+      <h2 class="seccion-titulo">¿Por qué Emprendenet?</h2>
+      <div class="contenedor funciones-flex">
+
+        <div class="card funcion-card">
+          <div class="funcion-icon">🚀</div>
+          <h3>Fácil de usar</h3>
+          <p>Publica tus productos en minutos sin conocimientos técnicos. Interfaz diseñada para emprendedores.</p>
+        </div>
+
+        <div class="card funcion-card">
+          <div class="funcion-icon">🔒</div>
+          <h3>Pagos seguros</h3>
+          <p>Procesamos todos los pagos con cifrado. Tu dinero y el de tus clientes siempre protegidos.</p>
+        </div>
+
+        <div class="card funcion-card">
+          <div class="funcion-icon">📊</div>
+          <h3>Estadísticas en tiempo real</h3>
+          <p>Monitorea ventas, visitas y comportamiento de clientes desde tu panel personalizado.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- JUEGO MEMORY MATCH -->
+    <section id="juego" class="seccion-juego">
+
+      <!-- PANTALLA DE INICIO DEL JUEGO -->
+      <div id="home-screen" class="game-panel active">
+        <h2 class="juego-titulo">JUNTA IGUALES</h2>
+        <p class="juego-subtitulo">Prueba tu memoria.</p>
+
+        <fieldset class="time-options" role="radiogroup" aria-label="Seleccionar tiempo">
+          <legend class="sr-only">Límite de tiempo</legend>
+          <button class="time-option" role="radio" aria-checked="false" data-time="30" onclick="selectTime(30, this)">30s</button>
+          <button class="time-option selected" role="radio" aria-checked="true" data-time="60" onclick="selectTime(60, this)">60s</button>
+          <button class="time-option" role="radio" aria-checked="false" data-time="90" onclick="selectTime(90, this)">90s</button>
+        </fieldset>
+
+        <button class="btn-juego-start" onclick="startGame()">▶ Iniciar Juego</button>
+      </div>
+
+      <!-- PANTALLA DEL JUEGO -->
+      <div id="game-screen" class="game-panel">
+        <div class="top-bar">
+          <h3 class="game-title">Memory Match</h3>
+          <div class="timer-text" id="timer-display" aria-live="polite" aria-label="Tiempo restante">1:00</div>
+          <div class="top-bar-btns">
+            <button class="btn-restart" onclick="restartGame()">↺ Restart</button>
+            <button class="btn-home-game" onclick="goHome()">⌂ Home</button>
+          </div>
+        </div>
+        <div class="card-grid-wrapper">
+          <div id="card-grid" class="card-grid" role="grid" aria-label="Cuadrícula de memoria"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- MODALES -->
+    <div id="win-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Ganaste">
+      <div class="modal-box">
+        <h2 class="modal-titulo">¡FELICIDADES!</h2>
+        <p id="win-detail" class="modal-detalle"></p>
+        <div class="modal-actions">
+          <button class="btn-juego-start" onclick="restartGame()">REPETIR</button>
+          <button class="btn-home-game" onclick="goHome()">INICIO</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="lose-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Tiempo agotado">
+      <div class="modal-box">
+        <h2 class="modal-titulo">Se acabó el tiempo.</h2>
+        <p id="lose-detail" class="modal-detalle"></p>
+        <div class="modal-actions">
+          <button class="btn-juego-start" onclick="restartGame()">Jugar de nuevo</button>
+          <button class="btn-home-game" onclick="goHome()">Inicio</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion-contacto">
+      <h2 class="seccion-titulo">Registra tu emprendimiento</h2>
+      <p class="seccion-subtitulo">Únete a miles de emprendedores que ya venden con nosotros</p>
+
+      <div class="form-wrapper">
+        <form id="miFormulario" onsubmit="return validarFormulario()">
+
+          <div class="form-grupo">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: María Guamán" />
+          </div>
+
+          <div class="form-grupo">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" />
+          </div>
+
+          <div class="form-grupo">
+            <label for="categoria">Categoría de tu negocio *</label>
+            <select id="categoria" name="categoria">
+              <option value="">— Selecciona una categoría —</option>
+              <option value="alimentos">Alimentos y bebidas</option>
+              <option value="artesanias">Artesanías</option>
+              <option value="ropa">Ropa y accesorios</option>
+              <option value="belleza">Belleza y cuidado</option>
+              <option value="tecnologia">Tecnología</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label for="descripcion">Describe tu emprendimiento *</label>
+            <textarea id="descripcion" name="descripcion" rows="4"
+              placeholder="Cuéntanos brevemente qué vendes y cuál es tu propuesta de valor..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primario btn-full">🎯 Registrarme gratis</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner contenedor">
+      <div class="footer-brand">
+        <span class="footer-logo">🛍️ Emprendenet</span>
+        <p>Impulsando el comercio local en todo el territorio ecuatoriano</p>
+      </div>
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <p class="footer-copy">Elaborado por: Erik Portero | 2do Semestre — Desarrollo de Software &copy; 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
