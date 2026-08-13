@@ -850,7 +850,103 @@ footer {
   width: 100%;
   text-align: center;
 }
+/* =============================================
+   TEMA OSCURO
+   ============================================= */
+[data-theme="dark"] {
+  --color-principal: #38bdf8;
+  --color-secundario: #000000;
+  --color-fondo: #0a0a0a;
+  --color-texto: #f4f4f5;
+  --color-texto-suave: #a1a1aa;
+  --color-borde: #27272a;
+}
 
+[data-theme="dark"] body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] .hero {
+  background: #000000;
+  border-bottom-color: var(--color-principal);
+}
+
+[data-theme="dark"] nav {
+  background: #000000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+[data-theme="dark"] footer {
+  background: #000000;
+}
+
+[data-theme="dark"] .seccion-titulo,
+[data-theme="dark"] .producto-card h3,
+[data-theme="dark"] .funcion-card h3,
+[data-theme="dark"] .form-grupo label {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .form-wrapper,
+[data-theme="dark"] .top-bar {
+  background: #111114;
+  border: 1px solid var(--color-borde);
+  box-shadow: 0 5px 20px rgba(0,0,0,.6);
+}
+
+[data-theme="dark"] .seccion-productos {
+  background: #050505;
+}
+
+[data-theme="dark"] .seccion-contacto {
+  background: linear-gradient(135deg, #0a0a0a, #050505);
+}
+
+[data-theme="dark"] .form-grupo input,
+[data-theme="dark"] .form-grupo select,
+[data-theme="dark"] .form-grupo textarea {
+  background: #0a0a0a;
+  color: #ffffff;
+  border-color: var(--color-borde);
+}
+
+[data-theme="dark"] .form-grupo input:focus,
+[data-theme="dark"] .form-grupo select:focus,
+[data-theme="dark"] .form-grupo textarea:focus {
+  background: #111114;
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.2);
+}
+
+[data-theme="dark"] .btn-nav,
+[data-theme="dark"] .btn-primario {
+  background: var(--color-principal);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .btn-nav:hover,
+[data-theme="dark"] .btn-primario:hover {
+  background: #0ea5e9;
+  box-shadow: 0 6px 20px rgba(56,189,248,0.4);
+}
+
+[data-theme="dark"] .btn-secundario {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.35);
+}
+
+[data-theme="dark"] .btn-secundario:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #ffffff;
+}
+
+[data-theme="dark"] .footer-copy {
+  color: #71717a;
+  border-top-color: #27272a;
+}
 /* =============================================
    RESPONSIVE
    ============================================= */
