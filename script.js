@@ -6,6 +6,36 @@ window.onload = function () {
 };
 
 // =============================================
+// TEMA OSCURO / CLARO
+// =============================================
+function aplicarTemaGuardado() {
+  const temaGuardado = localStorage.getItem("tema") || "light";
+  document.documentElement.setAttribute("data-theme", temaGuardado);
+  actualizarIconoTema(temaGuardado);
+}
+
+function toggleTema() {
+  const actual = document.documentElement.getAttribute("data-theme");
+  const nuevo = actual === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", nuevo);
+  localStorage.setItem("tema", nuevo);
+  actualizarIconoTema(nuevo);
+}
+
+function actualizarIconoTema(tema) {
+  const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+  btn.textContent = tema === "dark" ? "☀️" : "🌙";
+  btn.setAttribute(
+    "aria-label",
+    tema === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
+  );
+}
+
+document.addEventListener("DOMContentLoaded", aplicarTemaGuardado);
+
+
+// =============================================
 // MODIFICACIÓN DEL DOM
 // =============================================
 function actualizarMensaje() {
