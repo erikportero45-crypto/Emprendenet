@@ -33,7 +33,7 @@ function actualizarIconoTema(tema) {
 }
 
 document.addEventListener("DOMContentLoaded", aplicarTemaGuardado);
-
+}
 
 // =============================================
 // MODIFICACIÓN DEL DOM
