@@ -31,7 +31,7 @@ function actualizarIconoTema(tema) {
     tema === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
     }
   );
-}
+};
 
 document.addEventListener("DOMContentLoaded", aplicarTemaGuardado);
 }
