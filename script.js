@@ -29,6 +29,7 @@ function actualizarIconoTema(tema) {
   btn.setAttribute(
     "aria-label",
     tema === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
+    }
   );
 }
 
